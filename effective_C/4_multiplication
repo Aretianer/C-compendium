@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main()
+{
+    double firstNumber, secondNumber, product;
+    setlocale (0, "Russian");
+    printf("Введите 2 числа: ");
+
+    // Читаем два вещественных числа функцией scanf()
+    scanf("%lf %lf", &firstNumber, &secondNumber);
+
+    // Результат умножения сохраняем в переменную product
+    product = firstNumber * secondNumber;
+
+    // Выводим результат, после запятой два знака, формат %.lf
+    printf("Результат умножения = %.2lf\n", product);
+
+    return 0;
+}
