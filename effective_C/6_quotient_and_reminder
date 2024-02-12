@@ -1,0 +1,30 @@
+/************************************************************************
+* Project: Learning_C
+* Author: Denisov_A_V
+*************************************************************************/
+#include <stdio.h>
+#include <locale.h>
+
+int main(void)
+{
+    setlocale(0, "Russian");
+    int dividend, divisor, quotient, remainder;
+
+    printf("Введите делимое: ");
+    scanf("%d", &dividend);
+
+    printf("Введите делитель: ");
+    scanf("%d", &divisor);
+
+    // Computes quotient
+    quotient = dividend / divisor;
+
+    // Computes remainder
+    remainder = dividend % divisor;
+
+    printf("Частное = %d\n", quotient);
+    printf("Остаток деления = %d\n", remainder);
+    printf("Вычисления выполнены!");
+
+    return 0;
+}
