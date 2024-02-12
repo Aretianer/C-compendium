@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(0,"Russian");
+    int a;
+    long b;
+    long long c;
+    long long d;
+
+    double e;
+    long double f;
+
+    printf("Размер int равен %ld байт\n", sizeof(a));
+    printf("Размер long равен %ld байт\n", sizeof(b));
+    printf("Размер long long равен %ld байт\n", sizeof(c));
+    printf("Размер long long long очень длинный, такого не бывает\n");
+    printf("Размер double равен %ld байт\n", sizeof(e));
+    printf("Размер longdouble равен %ld байт\n", sizeof(f));
+
+    return 0;
+}
