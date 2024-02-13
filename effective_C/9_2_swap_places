@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main (void)
+{
+    setlocale(0, "Russian");
+    double A, B;
+
+    printf("Введите число A: ");
+    scanf("%lf", &A);
+
+    printf("Введите число B: ");
+    scanf("%lf", &B);
+
+    A = A - B;
+    B = A + B;
+    A = B - A;
+
+
+
+    printf("\n После замены A = %.2f\n", A);
+    printf("После замены B = %.2f", B);
+
+    return 0;
+}
