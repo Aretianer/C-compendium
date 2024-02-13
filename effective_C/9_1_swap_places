@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main (void)
+{
+    setlocale(0, "Russian");
+    double A, B, temp;
+
+    printf("Введите число A: ");
+    scanf("%lf", &A);
+
+    printf("Введите число B: ");
+    scanf("%lf", &B);
+
+    // Значение A будет присвоено перменной temp
+    temp = A;
+
+    // Значение A будет присвоено переменной B
+    A = B;
+
+    // Значение  temp будет присвоено перменной B
+    B = temp;
+
+    printf("\n После замены A = %.2f\n", A);
+    printf("После замены B = %.2f", B);
+
+    return 0;
+}
