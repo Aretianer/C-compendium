@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <wchar.h>
+#include <locale.h>
+
+int main (void)
+{
+    setlocale(0, "Russian");
+    char c;
+    int isLowercaseVowel, isUppercaseVowel;
+
+    printf("Введите символ на русской раскладке клавиатуры: \n");
+    scanf("%c", &c);
+
+    // возвращает 1 (true), если c - гласный (нижний регистр)
+    isLowercaseVowel = (c == 'а' || c == 'е' || c == 'и' || c == 'о' || c == 'у' || c == 'э' || c == 'ю'
+                        || c == 'я' || c == 'ы');
+    // возвращает 1 (true), если c - гласный (верхний регистр)
+    isUppercaseVowel = (c == 'А' || c == 'Е' || c == 'И' || c == 'О' || c == 'У' || c == 'Э' || c == 'Ю'
+                        || c == 'Я' || c == 'Ы');
+
+    // возвращает 1 (true), если true одна из переменных isLowercaseVowel или isUppercaseVowel
+    if (isLowercaseVowel || isUppercaseVowel)
+        printf("Введенный символ - гласный.\n");
+    else
+        printf("Введенный символ - согласный.\n");
+
+    return 0;
+}
