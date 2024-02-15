@@ -1,0 +1,19 @@
+/* Программа высчитывает сумму натуральных чисел */
+#include <stdio.h>
+#include <locale.h>
+
+int main(void)
+{
+    setlocale(0, "Russian");
+    int n, i, sum = 0;
+    printf("Введите положительное целое число: \n");
+    scanf("%d", &n);
+
+    for (i=1; i<= n; ++i)
+    {
+        sum += i;
+    }
+    printf("Сумма = %d\n",sum);
+
+    return 0;
+}
