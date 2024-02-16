@@ -1,0 +1,21 @@
+/* Программа для сложения натуральных чисел с циклом do..while */
+#include <stdio.h>
+#include <locale.h>
+
+int main(void)
+{
+    setlocale(0,"Russian");
+    int n, i, sum = 0;
+    do {
+        printf("Введите целое положительное число >0: \n");
+        scanf("%d", &n);
+        }
+    while (n<= 0);
+        for(i=1; i <= n; ++i)
+    {
+        sum += i;
+    }
+    printf("Сумма = %d", sum);
+
+    return 0;
+}
