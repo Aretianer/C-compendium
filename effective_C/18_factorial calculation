@@ -1,0 +1,26 @@
+/* Программа для вычисления факториала*/
+#include <stdio.h>
+#include <locale.h>
+
+int main(void)
+{
+    setlocale(0,"Russian");
+    int n, i;
+    unsigned long long factorial = 1;
+    printf("Введите n: \n");
+    scanf("%d", &n);
+
+    // Проверяем, чтобы введеное число было положительным
+
+    if (n < 0)
+        printf("Факториал отрицательного числа не существует!\n");
+    else
+    {
+        for(i = 1; i<=n; ++i)
+        {
+            factorial *=i;
+        }
+    }
+    printf("Факториал %d = %11u\n", n, factorial);
+    return 0;
+}
