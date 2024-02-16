@@ -1,0 +1,22 @@
+/* Программа для сложения натуральных чисел с циклом while */
+#include <stdio.h>
+#include <locale.h>
+
+int main(void)
+{
+    setlocale(0,"Russian");
+    int n, i, sum = 0;
+
+    printf("Введите число n: \n");
+    scanf ("%d", &n);
+    i = 1;
+
+    while (i <= n)
+    {
+        sum +=i;
+        ++i;
+    }
+
+    printf("Сумма  чисел = %d\n", sum);
+    return 0;
+}
