@@ -1,0 +1,14 @@
+/*Как сохранить пользовательский ввод в переменную?*/
+#include <iostream>
+
+
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	std::cout << "Введите номер: " << std::endl;
+	int a = 0;
+	std::cin >> a;
+	std::cout << "Вы ввели вот что: " << a << std::endl;
+	return 0;
+}
