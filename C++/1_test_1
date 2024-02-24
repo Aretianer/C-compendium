@@ -1,0 +1,24 @@
+/*Программа сложения двух чисел*/
+#include <iostream>
+
+int readNumber()
+{
+	int x = 0;
+	std::cin >> x;
+	return x;
+}
+
+void writeAnswer(int a, int b)
+{
+	std::cout << a + b << std::endl;
+}
+int main()
+{
+	int a;
+	int b;
+	a = readNumber();
+	b = readNumber();
+	writeAnswer(a, b);
+	
+	return 0;
+}
