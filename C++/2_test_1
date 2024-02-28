@@ -1,0 +1,43 @@
+#include <iostream>
+
+double numberFromUser()
+{
+	std::cout << "Please, enter the float number: " << std::endl;
+	double x;
+	std::cin >> x;
+	return x;
+}
+
+char getOperatorFromUser()
+{
+	std::cout << "Select an operator: +, -, * or /. " << std::endl;
+	char op;
+	std::cin >> op;
+	return op;
+}
+
+void printResult(double x, char op, double y)
+{
+	if (op == '*')
+		std::cout << x << '*' << y << '=' << x * y << '\n';
+	if (op == '/')
+		std::cout << x << '/' << y << '=' << x / y << '\n';
+	if (op == '+')
+		std::cout << x << '+' << y << '=' << x + y << '\n';
+	if (op == '-')
+		std::cout << x << '-' << y << '=' << x - y << '\n';
+	else
+		std::cout << "You made a mistake, try again." << std::endl;
+}
+
+int main()
+{
+	double x = numberFromUser();
+	double y = numberFromUser();
+
+	char op = getOperatorFromUser();
+
+	printResult(x, op, y);
+
+	return 0;
+}
