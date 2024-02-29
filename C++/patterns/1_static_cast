@@ -1,0 +1,23 @@
+/*How to use static_cast operator for convertation whole number into float*/
+#include <iostream>
+
+int main()
+{
+	int x = 7;
+	int y = 4;
+
+	//return only the integer part of the number and we lost the remainder of the division
+	std::cout << "int x / int y = " << x / y << std::endl;
+
+	//if we use static_cast, a float number will be return
+	std::cout << "double x / int y = " << static_cast<double>(x) / y << std::endl;
+
+	//it will be the same if we use static_cast in the denominator
+	std::cout << "int x / double y = " << x / static_cast<double>(y) << std::endl;
+
+	//and of course in this case the float will be return
+	std::cout << "double x / double y = " << static_cast<double>(x) / static_cast<double>(y)
+		<< std::endl;
+
+	return 0;
+}
