@@ -1,0 +1,22 @@
+/*This pattern illustrated how to use the divison operator with remainder*/
+/* % - return an integer after division */
+#include <iostream>
+
+int main()
+{
+    int count = 1;
+
+    while (count <= 100)
+        {
+        std::cout << count << " ";
+
+        // This statement cheks whether the number is divisible without remainder
+        if (count % 20 == 0)
+            std::cout << count << std::endl;
+        count = count + 1;
+        }
+
+    return 0;
+
+
+}
