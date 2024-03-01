@@ -1,0 +1,13 @@
+/*This pattern shows how to inputs numbers from user*/
+#include <iostream>
+#include <cmath>
+
+int numberFromUser()
+{
+	std::cout << "Please, input integer: " << "\n";
+	int numberFromUser;
+	std::cin >> numberFromUser;
+
+	return numberFromUser;
+
+}
