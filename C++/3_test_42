@@ -1,0 +1,28 @@
+/*This is my solution to the test task for determining an even number*/
+#include <iostream>
+#include <cmath>
+
+int numberFromUser()
+{
+	std::cout << "Please, input integer: " << "\n";
+	int numberFromUser;
+	std::cin >> numberFromUser;
+
+	return numberFromUser;
+
+}
+
+bool isEven(int number)
+{
+	return number % 2 == 0;
+}
+
+int main()
+{
+	int number = numberFromUser();
+	if (isEven(number))
+		std::cout << "True" << "\n";
+
+
+	return 0;
+}
