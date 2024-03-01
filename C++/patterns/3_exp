@@ -1,0 +1,18 @@
+/*This pattern shows how to use a pow() for exponentiation*/
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+	std::cout << "Enter the base: ";
+	double base;
+	std::cin >> base;
+
+	std::cout << "Enter the exponent: ";
+	double exponent;
+	std::cin >> exponent;
+
+	std::cout << base << "^" << exponent << "=" << pow(base, exponent) << "\n";
+
+	return 0;
+}
