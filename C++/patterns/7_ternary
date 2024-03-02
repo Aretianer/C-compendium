@@ -1,0 +1,26 @@
+/*How to use '?:' operator*/
+#include <iostream>
+
+int main()
+{
+	// '?:' operator is also called the ternary operator,
+	// which is used to simplify the branching 'if-else' record
+	// Note, that in this case the operands must be expressions 
+	
+	int x = 2;
+	int y = 3;
+	if (x > y)
+		int larger = x;
+	else
+		int larger = y;
+
+	// here we use '?:'
+	int a = 5;
+	int b = 4;
+
+	int larger = (a > b) ? a : b;
+	std::cout << larger << std::endl;
+
+	std::cout << ((a > b) ? a : b) << std::endl;
+	return 0;
+}
