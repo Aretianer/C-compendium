@@ -1,0 +1,10 @@
+/*How to use 'sizeof' operator*/
+#include <iostream>
+
+int main()
+{
+	double t = 7.0;
+	std::cout << sizeof(t);
+
+	return 0;
+}
