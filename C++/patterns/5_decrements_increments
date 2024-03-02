@@ -1,0 +1,27 @@
+/*This is an example of how to use ++x or x++ decrements*/
+#include <iostream>
+
+int main()
+{
+	//What happens when we use ++x
+	// if we will be use --x the principle will be the same
+	int x = 5;
+	int y = ++x;
+	std::cout << x << "\n\n";
+	std::cout << y << "\n\n";
+
+	//In this case we can see, that 'b' takes the value '5'
+	//and 'a' changes value to '6'
+	int a = 5;
+	int b = a++;
+	std::cout << a << "\n\n";
+	std::cout << b << "\n\n";
+
+	// This case shows how we can change value of 'z'
+	int z = 5;
+	++z;
+	std::cout << z << "\n\n";
+
+
+	return 0;
+}
