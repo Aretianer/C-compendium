@@ -1,0 +1,43 @@
+
+#include <iostream>
+
+int numberFromUser()
+{
+	std::cout << "Please, input number in the range '0' to '255': " << "\n";
+	int userNum;
+	std::cin >> userNum;
+	return userNum;
+}
+
+int main()
+{
+	int userNum = numberFromUser();
+	int one = 1;
+	int zero = 0;
+
+	std::cout << ((userNum >= 128) ? 1 : 0);
+	userNum = (userNum >= 128) ? userNum - 128 : userNum;
+
+	std::cout << ((userNum >= 64) ? 1 : 0);
+	userNum = (userNum >= 64) ? userNum - 64 : userNum;
+
+	std::cout << ((userNum >= 32) ? 1 : 0);
+	userNum = (userNum >= 32) ? userNum - 32 : userNum;
+
+	std::cout << ((userNum >= 16) ? 1 : 0) << " ";
+	userNum = (userNum >= 16) ? userNum - 16 : userNum;
+
+	std::cout << ((userNum >= 8) ? 1 : 0);
+	userNum = (userNum >= 8) ? userNum - 8 : userNum;
+
+	std::cout << ((userNum >= 4) ? 1 : 0);
+	userNum = (userNum >= 4) ? userNum - 4 : userNum;
+
+	std::cout << ((userNum >= 2) ? 1 : 0);
+	userNum = (userNum >= 2) ? userNum - 2 : userNum;
+
+	std::cout << ((userNum >= 1) ? 1 : 0) << std::endl;
+	userNum = (userNum >= 1) ? userNum - 1 : userNum;
+
+	return 0;
+}
