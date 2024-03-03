@@ -1,0 +1,31 @@
+/*This case illustrated local variables, scope and their lifetime*/
+#include <iostream>
+
+int main()
+{
+	int m(4);
+	{
+		double k(5.0);
+		std::cout << m << std::endl; // variable 'm' may be used, because it is located in the upper block
+	}
+	// std::cout << k; give a mistake, beacause it has already been deleted
+
+	int oranges(5);
+
+	if (oranges >= 5)
+	{
+		int oranges; // The external variable is hidden
+		oranges = 10; // Value of 'oranges' is used only in nested variable
+		std::cout << oranges << std::endl;
+	} // oranges is being deleted
+
+	std::cout << oranges << std::endl; // oranges = 5
+
+	if (oranges >= 4)
+	{
+		oranges = 10; //there is no hidding of name here, since the variable is not defined
+	}
+
+	std::cout << oranges << std::endl; // oranges = 10
+	return 0;
+}
