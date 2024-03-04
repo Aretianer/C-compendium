@@ -1,0 +1,22 @@
+/*This listing shows how global variables work*/
+
+#include <iostream>
+
+int g_x; //this variable is defined outside the block, so it is global variable
+const int g_y(3); //this is const variable. By default can only be used into this file
+
+int static g_z; // this is variable that can only be used inside a single file
+extern double g_a(9.8); // this is external variable that can be used in any file of program
+int value(4);
+
+int main()
+{
+	int value = 8; // in this case variable hide value of global variable
+	value++; // only the local variable is incremeted
+	::value--; // the global is decremented, because we used ::
+
+	std::cout << value << "\n";
+	std::cout << ::value << "\n";
+
+	return 0;
+} // local variable is deleted
