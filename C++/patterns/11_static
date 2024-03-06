@@ -1,0 +1,22 @@
+/*This listing shows how static variables works*/
+
+#include <iostream>
+void incrementAndPrint()
+{
+	int value = 1; //automatic lifespan
+	++value;
+	std::cout << value << std::endl;
+	
+	static int s_value = 1; // s_value have a static lifespan
+	++s_value;
+	std::cout << s_value << std::endl;
+} // here the variable 'value' is deleted. s_value is not deleted but is unavailable
+
+int main()
+{
+	incrementAndPrint();
+	incrementAndPrint();
+	incrementAndPrint();
+
+	return 0;
+} // local variable is deleted
