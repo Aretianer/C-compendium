@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+
+int main()
+{
+	std::cout << "Enter your full name: " << "\n";
+	std::string myName;
+	std::getline(std::cin, myName);
+
+	std::cout << "Enter your age: " << "\n";
+	int age;
+	std::cin >> age;
+
+	int x = myName.length();
+	
+	double ageOnLength = static_cast<double>(age) / x;
+	std::cout << "You've lived " << ageOnLength << " years for each letter in your name." << "\n";
+	return 0;
+}
