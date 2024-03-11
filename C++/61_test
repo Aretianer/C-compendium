@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+
+enum Monsters
+{
+	MONSTERS_OGRE,
+	MONSTRES_GOBLIN,
+	MONSTERS_SKELETON,
+	MONSTERS_ORC,
+	MONSTERS_TROLL,
+};
+int main()
+{
+	Monsters evil(MONSTERS_SKELETON);
+	std::cout << evil;
+	return 0;
+}
